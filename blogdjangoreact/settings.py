@@ -34,7 +34,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = (env('DEBUG_VALUE') == 'True')
 SECRET_KEY = env('SECRET_KEY')
 
-ALLOWED_HOSTS = [blogmiguepro.herokuapp.com]
+ALLOWED_HOSTS = ['blogmiguepro.herokuapp.com']
 # CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = [
@@ -175,3 +175,11 @@ REST_FRAMEWORK = {
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 SUMMERNOTE_THEME = 'bs4'
+
+
+## heroku deployment
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+django_heroku.settings(locals())
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
