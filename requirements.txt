@@ -188,7 +188,7 @@ sphinxcontrib-htmlhelp==2.0.0
 sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.5
-sqlparse==0.4.1
+sqlparse==0.4.2
 submit50==3.0.3
 team==1.0
 tensorboard==2.6.0
