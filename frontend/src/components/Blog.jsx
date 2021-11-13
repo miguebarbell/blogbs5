@@ -81,11 +81,18 @@ const Blog = () => {
 			</div>
 			<div className="jumbotron p-4 p-md-5 text-white rounded bg-dark">
 			<div className="col-md-6">
-				<div className="h-100 p-5 text-white bg-dark rounded-3">
+				<div className="d-flex justify-content-between h-100 p-5 text-white bg-dark rounded-3">
+					<div className="col-auto d-none d-lg-block">
+						<img src={featuredBlog.thumbnail} alt={featuredBlog.title} style={{width:'200px', height:'250px', objectFit:'cover'}}/>
+					</div>
+					<div>
 					<h2>{featuredBlog.title}</h2>
 					<p>{featuredBlog.excerpt}</p>
 					<Link to={`/blog/${featuredBlog.slug}`} className="btn btn-outline-light" type="button">Continue Reading</Link>
+					</div>
+
 				</div>
+
 			</div>
 			</div>
 			{getBlogs()}
