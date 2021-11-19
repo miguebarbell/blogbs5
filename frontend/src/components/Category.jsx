@@ -71,6 +71,7 @@ const Category = (props) => {
                     <Link className="p-2 text-muted text-capitalize" to="/category/gaming/">gaming</Link>
                     <Link className="p-2 text-muted text-capitalize" to="/category/news/">news</Link>
                     <Link className="p-2 text-muted text-capitalize" to="/category/science/">Science</Link>
+                    <Link className="p-2 text-muted text-capitalize" to="/category/sports/">Sports</Link>
 					<Link className="p-2 text-muted text-capitalize" to="/category/style/">Style</Link>
 					<Link className="p-2 text-muted text-capitalize" to="/category/travel/">Travel</Link>
                     <Link className="p-2 text-muted text-capitalize" to="/category/world/">World</Link>
