@@ -79,7 +79,7 @@ const Blog = () => {
 					<Link className="p-2 text-muted text-capitalize" to="/category/world/">World</Link>
 				</nav>
 			</div>
-			<div className="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+			<div className="jumbotron text-white rounded bg-dark">
 			<div className="col-md-6">
 				<div className="d-flex justify-content-between h-100 p-5 text-white bg-dark rounded-3">
 					<div className="col-auto d-none d-lg-block">

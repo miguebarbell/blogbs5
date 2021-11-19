@@ -26,6 +26,7 @@ class BlogPost(models.Model):
     title = models.CharField(max_length=255, unique=True)
     slug = models.SlugField()
     category = models.CharField(max_length=255, choices=Categories.choices, default=Categories.WORLD)
+    # must upload the image to a S3 bucket
     thumbnail = models.ImageField(upload_to='photos/%Y/%m/%d')
     excerpt = models.CharField(max_length=255)
     created = models.DateField(auto_now_add=True)
