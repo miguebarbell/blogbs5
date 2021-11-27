@@ -12,9 +12,11 @@ def get_categories(request):
     print('getting categories')
     if request.method == 'GET':
         categories = BlogPost.objects.all().distinct('category').order_by('category')
-        print(categories)
-        return JsonResponse({'201': 'all the distinct categories'})
-
+        response = {'categories': []}
+        for category in categories:
+            response['categories'].append(category.category)
+        print(response)
+        return JsonResponse({{response}})
 
 class BlogPostListView(ListAPIView):
     queryset = BlogPost.objects.order_by('-created')
@@ -22,20 +24,17 @@ class BlogPostListView(ListAPIView):
     lookup_field = 'slug'
     permission_classes = (permissions.AllowAny, )
 
-
 class BlogPostDetailView(RetrieveAPIView):
     queryset = BlogPost.objects.order_by('-created')
     serializer_class = BlogPostSerializer
     lookup_field = 'slug'
     permission_classes = (permissions.AllowAny, )
 
-
 class BlogPostFeaturedView(ListAPIView):
     queryset = BlogPost.objects.all().filter(featured=True)
     serializer_class = BlogPostSerializer
     lookup_field = 'slug'
     permission_classes = (permissions.AllowAny, )
-
 
 class BlogPostCategoryView(APIView):
     serializer_class = BlogPostSerializer
@@ -47,5 +46,3 @@ class BlogPostCategoryView(APIView):
         queryset = BlogPost.objects.order_by('-created').filter(category__iexact=category)
         serializer = BlogPostSerializer(queryset, many=True)
         return Response(serializer.data)
-
-
