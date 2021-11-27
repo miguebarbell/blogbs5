@@ -74,14 +74,15 @@ const Blog = () => {
 					<Link className="p-2 text-muted text-capitalize" to="/category/gaming/">gaming</Link>
 					<Link className="p-2 text-muted text-capitalize" to="/category/news/">news</Link>
 					<Link className="p-2 text-muted text-capitalize" to="/category/science/">Science</Link>
+					<Link className="p-2 text-muted text-capitalize" to="/category/sports/">Sports</Link>
 					<Link className="p-2 text-muted text-capitalize" to="/category/style/">Style</Link>
 					<Link className="p-2 text-muted text-capitalize" to="/category/travel/">Travel</Link>
 					<Link className="p-2 text-muted text-capitalize" to="/category/world/">World</Link>
 				</nav>
 			</div>
 			<div className="jumbotron text-white rounded bg-dark">
-			<div className="col-md-6">
-				<div className="d-flex justify-content-between h-100 p-5 text-white bg-dark rounded-3">
+			<div className="col-md-6 w-100">
+				<div className="d-flex justify-content-between h-100 w-100 p-5 text-white bg-dark rounded-3">
 					<div className="col-auto d-none d-lg-block">
 						<img src={featuredBlog.thumbnail} alt={featuredBlog.title} style={{width:'200px', height:'250px', objectFit:'cover'}}/>
 					</div>
