@@ -40,7 +40,7 @@ const Category = (props) => {
                         <Link to={`/blog/${blogPost.slug}`} className="stretched-link">Continue reading</Link>
                     </div>
                     <div className="col-auto d-none d-lg-block">
-                        <img src={`${process.env.REACT_APP_API_URL}${blogPost.thumbnail}`} alt={blogPost.title} style={{width:'200px', height:'250px', borderRadius:'10px', objectFit:'cover'}}/>
+                        <img src={blogPost.thumbnail} alt={blogPost.title} style={{width:'200px', height:'250px', borderRadius:'10px', objectFit:'cover'}}/>
                     </div>
                 </div>
             )
